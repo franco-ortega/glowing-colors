@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import Orb from './Orb';
 
 describe('Orb tests', () => {
-  it('should render an Orb', () => {
+  test('should render an Orb', () => {
     render(
       <Orb />
     );
@@ -13,13 +13,13 @@ describe('Orb tests', () => {
     expect(element).toBeInTheDocument();
   });
 
-  it('should render an Orb', () => {
+  test('Orb should be empty', () => {
     render(
       <Orb />
     );
 
     const element = screen.getByTestId('orb-element');
 
-    expect(element).toBeInTheDocument();
+    expect(element).toBeEmptyDOMElement();
   });
 });
