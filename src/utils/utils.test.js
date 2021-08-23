@@ -69,6 +69,13 @@ describe('tests for utils functions', () => {
 
   describe('returns a random number of orbs', () => {
 
+    test('returns a number', () => {
+      const result = orbCount();
+      const expected = (typeof result === 'number');
+
+      expect(expected).toBe(true);
+    });
+
     test('orbCount: returns a number between 1 and 10', () => {
       const result = orbCount();
       const expected = 1 <= result <= 10;
