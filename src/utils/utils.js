@@ -9,3 +9,7 @@ export const colorPicker = (opacity = 1) => {
 
   return `rgb(${red}, ${green}, ${blue}, ${opacity})`;
 };
+
+export const orbCount = () => {
+  return Math.ceil(Math.random() * 10);
+};
