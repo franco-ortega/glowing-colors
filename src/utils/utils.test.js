@@ -92,4 +92,23 @@ describe('tests for utils functions', () => {
 
   });
 
+  describe('shadowThickness: sets the box-shadow between 1vw and 5vw', () => {
+
+    test('returns a string', () => {
+      const result = shadowThickness();
+      const expected = (typeof result === 'string');
+
+      expect(expected).toBe(true);
+    });
+
+    test('characters before the last two items can be coerced to numbers, such as 2vw or 4.5vw', () => {
+      const result = shadowThickness();
+      const expected = typeof result[result.length -2] == 'number';
+
+      expect(expected).toBe(true);
+    });
+
+
+  });
+
 });
