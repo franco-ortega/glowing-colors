@@ -50,6 +50,21 @@ describe('tests for utils functions', () => {
       expect(expected).toBe(true);  
     });
 
+    test('returns a string with a length equal or greater to the minimum length of an rgb value with an opacity of .75', () => {
+      const result = colorPicker(.75);
+      const expected = result.length >= 18;
+      console.log(result);
+
+      expect(expected).toBe(true);  
+    });
+
+    test('returns a string with a length less than or equal to the maximum length of an rgb value with an opacity of .75', () => {
+      const result = colorPicker(.75);
+      const expected = result.length <= 24;
+
+      expect(expected).toBe(true);  
+    });
+
   });
 
 });
