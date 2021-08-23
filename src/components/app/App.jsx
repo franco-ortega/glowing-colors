@@ -6,7 +6,6 @@ export const App = () => {
   return (
     <main data-testid='app'>
       <Orb />
-      <Orb />
     </main>
   );
 };

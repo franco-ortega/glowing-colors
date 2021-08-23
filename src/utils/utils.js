@@ -1,4 +1,4 @@
-const colorCode = () => {
+export const colorCode = () => {
   return Math.floor(Math.random() * 256);
 };
 
