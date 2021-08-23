@@ -83,6 +83,14 @@ describe('tests for utils functions', () => {
       expect(expected).toBe(true);
     });
 
+    test('returns an integer', () => {
+      const result = orbCount();
+      const expected = Number.isInteger(result);
+
+      expect(expected).toBe(true);
+    });
+
+
   });
 
 });
