@@ -1,9 +1,13 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
+import styles from './Orb.module.css';
 
 const Orb = () => {
   return (
-    <div data-testid="orb-element"></div>
+    <div
+      className={styles.Orb}
+      data-testid="orb-element"
+    ></div>
   );
 };
 

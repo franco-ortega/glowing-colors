@@ -2,8 +2,17 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const element = screen.getByTestId('app')
-  expect(element).toBeInTheDocument();
+describe('App tests', () => {
+  test('renders App', () => {
+    render(<App />);
+    const element = screen.getByTestId('app');
+    expect(element).toBeInTheDocument();
+  });
+
+  test('Orb renders in App', () => {
+    render(<App />);
+    const element = screen.getByTestId('orb-element');
+    expect(element).toBeInTheDocument();
+  });
+
 });

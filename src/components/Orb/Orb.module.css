@@ -1,8 +1,9 @@
-Orb {
-  height: 10vh;
+.Orb {
+  height: 15vh;
   width: 10vw;
   margin: 5vw;
 
   background: green;
-  border: lightgreen;
+  border: thick solid lightgreen;
+  border-radius: 50%;
 }
