@@ -1,0 +1,8 @@
+.Orb {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin: 5vw;
+
+  border: thick solid rgb(144, 238, 144);
+}
