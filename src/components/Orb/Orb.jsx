@@ -18,6 +18,7 @@ const Orb = () => {
 
   const bkdgColor = colorPicker();
   const borderStyle = `thick solid ${colorPicker()}`;
+  const boxShadowStyle = `0 0 2vw 2vw ${colorPicker()}`;
 
   console.log(bkdgColor);
   console.log(borderStyle);
@@ -27,8 +28,9 @@ const Orb = () => {
       className={styles.Orb}
       data-testid="orb-element"
       style={{
-        background: bkdgColor,
-        border: borderStyle
+        backgroundColor: bkdgColor,
+        border: borderStyle,
+        boxShadow: boxShadowStyle
       }}
     ></div>
   );
