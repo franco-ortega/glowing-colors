@@ -1,8 +1,8 @@
-import { colorCode, colorPicker } from './utils';
+import { colorCode, colorPicker, orbCount } from './utils';
 
 describe('tests for utils functions', () => {
 
-  describe('returns an integer between 0 and 255', () => {
+  describe('codeCode: returns an integer between 0 and 255', () => {
 
     test('returns a number', () => {
       const result = colorCode();
@@ -27,7 +27,7 @@ describe('tests for utils functions', () => {
 
   });
 
-  describe('returns an rgb value', () => {
+  describe('colorPicker: returns an rgb value', () => {
 
     test('returns a string', () => {
       const result = colorPicker();
@@ -50,7 +50,7 @@ describe('tests for utils functions', () => {
       expect(expected).toBe(true);  
     });
 
-    test('returns a string with a length equal or greater to the minimum length of an rgb value with an opacity of .75', () => {
+    test('returns a string with a length equal or greater to the minimum length of an rgb value with an opacity of 0.75', () => {
       const result = colorPicker(.75);
       const expected = result.length >= 18;
       console.log(result);
@@ -58,11 +58,22 @@ describe('tests for utils functions', () => {
       expect(expected).toBe(true);  
     });
 
-    test('returns a string with a length less than or equal to the maximum length of an rgb value with an opacity of .75', () => {
+    test('returns a string with a length less than or equal to the maximum length of an rgb value with an opacity of 0.75', () => {
       const result = colorPicker(.75);
       const expected = result.length <= 24;
 
       expect(expected).toBe(true);  
+    });
+
+  });
+
+  describe('returns a random number of orbs', () => {
+
+    test('orbCount: returns a number between 1 and 10', () => {
+      const result = orbCount();
+      const expected = 1 <= result <= 10;
+
+      expect(expected).toBe(true);
     });
 
   });
