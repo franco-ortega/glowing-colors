@@ -7,3 +7,7 @@
 body {
   background: rgb(10, 5, 10, .9);
 }
+
+main {
+  display: flex;
+}
