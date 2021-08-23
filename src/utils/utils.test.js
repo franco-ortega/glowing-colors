@@ -1,12 +1,12 @@
-import { colorCode } from './utils';
+import { colorCode, colorPicker } from './utils';
 
-describe('test for utils functions', () => {
+describe('tests for utils functions', () => {
 
-  describe('return an integer between 0 and 255', () => {
+  describe('returns an integer between 0 and 255', () => {
+
     test('returns a number', () => {
       const result = colorCode();
       const expected = (typeof result === 'number');
-      console.log(typeof result);
 
       expect(expected).toBe(true);
     });
@@ -17,12 +17,26 @@ describe('test for utils functions', () => {
 
       expect(expected).toBe(true);
     });
+
     test('returns an integer', () => {
       const result = colorCode();
       const expected = Number.isInteger(result);
 
       expect(expected).toBe(true);
     });
+
+  });
+
+  describe('returns an rgb value', () => {
+
+    test('returns a string', () => {
+      const result = colorPicker();
+      const expected = typeof result === 'string';
+
+      expect(result).toBeTruthy();
+      expect(expected).toBe(true);
+    });
+
 
   });
 });
