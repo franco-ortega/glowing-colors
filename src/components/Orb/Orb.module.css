@@ -1,0 +1,8 @@
+Orb {
+  height: 10vh;
+  width: 10vw;
+  margin: 5vw;
+
+  background: green;
+  border: lightgreen;
+}

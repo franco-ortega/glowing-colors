@@ -10,6 +10,6 @@ describe('Orb tests', () => {
 
     const element = screen.getByTestId('orb-element');
 
-    expect(element).not.toBeEmptyDOMElement();
+    expect(element).toBeInTheDocument();
   });
 });
