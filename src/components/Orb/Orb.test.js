@@ -12,4 +12,14 @@ describe('Orb tests', () => {
 
     expect(element).toBeInTheDocument();
   });
+
+  it('should render an Orb', () => {
+    render(
+      <Orb />
+    );
+
+    const element = screen.getByTestId('orb-element');
+
+    expect(element).toBeInTheDocument();
+  });
 });
