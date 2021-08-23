@@ -67,7 +67,7 @@ describe('tests for utils functions', () => {
 
   });
 
-  describe('returns a random number of orbs', () => {
+  describe('orbCount: returns 1 to 10 orbs', () => {
 
     test('returns a number', () => {
       const result = orbCount();
@@ -89,7 +89,6 @@ describe('tests for utils functions', () => {
 
       expect(expected).toBe(true);
     });
-
 
   });
 
