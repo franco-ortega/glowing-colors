@@ -1,4 +1,4 @@
-import { colorCode, colorPicker, orbCount } from './utils';
+import { colorCode, colorPicker, orbCount, shadowThickness } from './utils';
 
 describe('tests for utils functions', () => {
 
@@ -53,7 +53,6 @@ describe('tests for utils functions', () => {
     test('returns a string with a length equal or greater to the minimum length of an rgb value with an opacity of 0.75', () => {
       const result = colorPicker(.75);
       const expected = result.length >= 18;
-      console.log(result);
 
       expect(expected).toBe(true);  
     });
@@ -101,13 +100,14 @@ describe('tests for utils functions', () => {
       expect(expected).toBe(true);
     });
 
-    test('characters before the last two items can be coerced to numbers, such as 2vw or 4.5vw', () => {
+    test('characters before the last two "vw" character can be coerced to numbers, such as 2vw or 4.75vw', () => {
       const result = shadowThickness();
-      const expected = typeof result[result.length -2] == 'number';
+      const numberValueAsString = result.slice(0, -2);
+
+      const expected = numberValueAsString == Number(numberValueAsString);
 
       expect(expected).toBe(true);
     });
-
 
   });
 

@@ -13,3 +13,14 @@ export const colorPicker = (opacity = 1) => {
 export const orbCount = () => {
   return Math.ceil(Math.random() * 10);
 };
+
+export const shadowThickness = () => {
+  const value = Math.max(1, (Math.random() * 10).toFixed(2));
+
+  return `${value}vw`;
+};
+
+shadowThickness();
+shadowThickness();
+shadowThickness();
+shadowThickness();
