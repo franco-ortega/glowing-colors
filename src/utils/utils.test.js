@@ -33,10 +33,15 @@ describe('tests for utils functions', () => {
       const result = colorPicker();
       const expected = typeof result === 'string';
 
-      expect(result).toBeTruthy();
       expect(expected).toBe(true);
     });
 
+    test('returns a string with a length equal or greater to the minimum length of an rgb value', () => {
+      const result = colorPicker();
+      const expected = result.length >= 15;
+
+      expect(expected).toBe(true);  
+    });
 
   });
 });
