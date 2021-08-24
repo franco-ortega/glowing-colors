@@ -14,13 +14,14 @@ export const orbCount = () => {
   return Math.ceil(Math.random() * 10);
 };
 
-export const shadowThickness = () => {
-  const value = Math.max(1, (Math.random() * 10).toFixed(2));
+export const shadowBlur = () => {
+  const value = Math.max(3, (Math.random() * 15).toFixed(2));
 
   return `${value}vw`;
 };
 
-shadowThickness();
-shadowThickness();
-shadowThickness();
-shadowThickness();
+export const shadowSpread = () => {
+  const value = Math.max(1, (Math.random() * 5).toFixed(2));
+
+  return `${value}vw`;
+};
