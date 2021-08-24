@@ -11,8 +11,11 @@ describe('App tests', () => {
 
   test('Orb renders in App', () => {
     render(<App />);
-    const element = screen.getByTestId('orb-element');
-    expect(element).toBeInTheDocument();
+    const elements = screen.getAllByTestId('orb-element');
+    
+    elements.forEach(element => {
+      expect(element).toBeInTheDocument();
+    });
   });
 
 });

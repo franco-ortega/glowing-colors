@@ -9,7 +9,7 @@ export const App = () => {
   const orbs = [];
 
   for(let i = 1; i < orbTotal + 1; i++) {
-    orbs.push(<Orb />);
+    orbs.push(<Orb key={i} />);
   }
 
   return (
