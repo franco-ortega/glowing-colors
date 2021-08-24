@@ -3,6 +3,43 @@
   height: 75px;
   width: 75px;
   margin: 5vw;
+
+  animation: fade 5s linear 0s 1 normal forwards;
+  -webkit-animation: fade 5s linear 0s 1 normal forwards;
+  -moz-animation: fade 5s linear 0s 1 normal forwards;
+  -o-animation: fade 5s linear 0s 1 normal forwards;
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  25% { opacity: 0.5; }
+  50% { opacity: 1; }
+  75% { opacity: 0.5; }
+  100% { opacity: 0; }
+}
+
+@-moz-keyframes fade {
+  0% { opacity: 0; }
+  25% { opacity: 0.5; }
+  50% { opacity: 1; }
+  75% { opacity: 0.5; }
+  100% { opacity: 0; }
+}
+
+@-webkit-keyframes fade {
+  0% { opacity: 0; }
+  25% { opacity: 0.5; }
+  50% { opacity: 1; }
+  75% { opacity: 0.5; }
+  100% { opacity: 0; }
+}
+
+@-o-keyframes fade {
+  0% { opacity: 0; }
+  25% { opacity: 0.5; }
+  50% { opacity: 1; }
+  75% { opacity: 0.5; }
+  100% { opacity: 0; }
 }
 
 @media screen and (min-width: 500px) {

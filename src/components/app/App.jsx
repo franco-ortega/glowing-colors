@@ -1,31 +1,40 @@
-import React, { useEffect, useState } from 'react';
+import React, {
+  useEffect, 
+  useState 
+} from 'react';
 import { orbCount } from '../../utils/utils';
 import Orb from '../Orb/Orb';
 import './Global.css';
 import styles from './App.module.css';
 
 export const App = () => {
-  const [reset, setReset] = useState(false);
-  const timer = 3000;
-
-  useEffect(() => {
-    setTimeout(() => setReset(!reset), timer);
-  }, [reset]);
-
-
+  const [orbs, setOrbs] = useState([]);
   const orbTotal = orbCount();
-  const orbs = [];
+  const orbContainer = [];
 
   for(let i = 1; i < orbTotal + 1; i++) {
-    orbs.push(<Orb key={i} />);
+    orbContainer.push(<Orb key={i} />);
   }
+
+  const [reset, setReset] = useState(true);
+  const timer = 5000;
+
+  useEffect(() => {
+    setOrbs(orbContainer);
+    setTimeout(() => {
+      setReset(!reset);
+    }, timer);
+  }, [reset]);
 
   return (
     <main
       className={styles.App}
       data-testid='app'
     >
-      {orbs}
+      <section>
+        {reset && orbs}
+        {!reset && orbs}
+      </section>
     </main>
   );
 };
