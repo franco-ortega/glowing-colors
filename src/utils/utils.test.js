@@ -154,6 +154,15 @@ describe('tests for utils functions', () => {
       expect(expected).toBe(true);
     });
 
+    test('characters before the last "%" character can be coerced to numbers, such as 5% or 47%', () => {
+      const result = selectPosition();
+      const numberValueAsString = result.slice(0, -1);
+      const expected = numberValueAsString == Number(numberValueAsString);
+
+      expect(expected).toBe(true);
+    });
+
+
   });
 
 });
