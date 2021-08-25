@@ -1,4 +1,4 @@
-import { colorPicker, orbCount, selectPosition } from './utils';
+import { colorPicker, orbCount, positionPicker } from './utils';
 
 describe('tests for utils functions', () => {
 
@@ -66,17 +66,17 @@ describe('tests for utils functions', () => {
 
   });
 
-  describe('selectPosition: returns a string used to determine position values', () => {
+  describe('positionPicker: returns a string used to determine position values', () => {
 
     test('returns a string', () => {
-      const result = selectPosition();
+      const result = positionPicker();
       const expected = (typeof result === 'string');
 
       expect(expected).toBe(true);
     });
 
     test('characters before the last "%" character can be coerced to numbers, such as 5% or 47%', () => {
-      const result = selectPosition();
+      const result = positionPicker();
       const numberValueAsString = result.slice(0, -1);
       const expected = numberValueAsString == Number(numberValueAsString);
 
@@ -84,7 +84,7 @@ describe('tests for utils functions', () => {
     });
 
     test('numbers in string are between 0 and 75', () => {
-      const result = selectPosition();
+      const result = positionPicker();
       const numberValueAsString = result.slice(0, -1);
       const expected = 1 <= numberValueAsString <= 75;
 

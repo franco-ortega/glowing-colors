@@ -17,14 +17,14 @@ const boxShadowPicker = () => {
   return `0 0 ${blurRadius}vw ${spreadRadius}vw ${colorPicker(1)}`;
 };
 
-export const selectPosition = () => (Math.random() * 75).toFixed(0) + '%';
+export const positionPicker = () => (Math.random() * 75).toFixed(0) + '%';
 
 export const generateOrbStyle = () => {
   const bkdgColor = colorPicker(.75);
   const borderStyle = borderPicker();
   const boxShadowStyle = boxShadowPicker();
-  const positionTop = selectPosition();
-  const positionRight = selectPosition();
+  const positionTop = positionPicker();
+  const positionRight = positionPicker();
 
   return {
     backgroundColor: bkdgColor,
