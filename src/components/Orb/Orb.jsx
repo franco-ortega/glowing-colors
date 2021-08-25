@@ -4,7 +4,7 @@ import styles from './Orb.module.css';
 
 const Orb = () => {
   const orbStyle = generateOrbStyle();
-  console.log(orbStyle);
+  // console.log(orbStyle);
 
   return (
     <div

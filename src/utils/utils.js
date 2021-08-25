@@ -8,16 +8,11 @@ export const colorPicker = (opacity = 1) => {
   return `rgb(${red}, ${green}, ${blue}, ${opacity})`;
 };
 
-export const shadowBlur = () => {
-  const value = Math.max(3, (Math.random() * 15).toFixed(2));
+const boxShadowPicker = () => {
+  const blurRadius = Math.max(3, (Math.random() * 15).toFixed(2));
+  const spreadRadius = Math.max(1, (Math.random() * 5).toFixed(2));
 
-  return `${value}vw`;
-};
-
-export const shadowSpread = () => {
-  const value = Math.max(1, (Math.random() * 5).toFixed(2));
-
-  return `${value}vw`;
+  return `0 0 ${blurRadius}vw ${spreadRadius}vw ${colorPicker(1)}`;
 };
 
 export const selectPosition = () => {
@@ -27,9 +22,8 @@ export const selectPosition = () => {
 export const generateOrbStyle = () => {
   const bkdgColor = colorPicker(.75);
   const borderStyle = `medium solid ${colorPicker(.5)}`;
-  const blurRadius = shadowBlur();
-  const spreadRadius = shadowSpread();
-  const boxShadowStyle = `0 0 ${blurRadius} ${spreadRadius} ${colorPicker(1)}`;
+  const boxShadowStyle = boxShadowPicker();
+  console.log(boxShadowStyle);
   const positionTop = selectPosition();
   const positionRight = selectPosition();
 
