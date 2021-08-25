@@ -35,6 +35,4 @@ export const generateOrbStyle = () => {
   };
 };
 
-export const orbCount = () => {
-  return Math.ceil(Math.random() * 10);
-};
+export const orbCount = () => Math.ceil(Math.random() * 10);
