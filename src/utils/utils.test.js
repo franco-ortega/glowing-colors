@@ -91,6 +91,32 @@ describe('tests for utils functions', () => {
       expect(expected).toBe(true);
     });
 
+  });
+
+  describe('heightPicker: returns a string used to determine the height in pixel', () => {
+
+    test('returns a string', () => {
+      const result = heightPicker();
+      const expected = (typeof result === 'string');
+
+      expect(expected).toBe(true);
+    });
+
+    test('characters before the "px" characters at the end can be coerced to a number, such as 5px or 47px', () => {
+      const result = heightPicker();
+      const numberValueAsString = result.slice(0, -2);
+      const expected = numberValueAsString == Number(numberValueAsString);
+
+      expect(expected).toBe(true);
+    });
+
+    test('numbers in string are between 10 and 200', () => {
+      const result = heightPicker();
+      const numberValueAsString = result.slice(0, -1);
+      const expected = 10 <= numberValueAsString <= 200;
+
+      expect(expected).toBe(true);
+    });
 
   });
 
