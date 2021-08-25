@@ -17,9 +17,7 @@ const boxShadowPicker = () => {
   return `0 0 ${blurRadius}vw ${spreadRadius}vw ${colorPicker(1)}`;
 };
 
-export const selectPosition = () => {
-  return (Math.random() * 75).toFixed(0) + '%';
-};
+export const selectPosition = () => (Math.random() * 75).toFixed(0) + '%';
 
 export const generateOrbStyle = () => {
   const bkdgColor = colorPicker(.75);
