@@ -1,4 +1,4 @@
-import { colorPicker, orbCount, positionPicker } from './utils';
+import { colorPicker, heightPicker, orbCount, positionPicker } from './utils';
 
 describe('tests for utils functions', () => {
 
@@ -110,10 +110,10 @@ describe('tests for utils functions', () => {
       expect(expected).toBe(true);
     });
 
-    test('numbers in string are between 10 and 200', () => {
+    test('numbers in string are between 0 and 200', () => {
       const result = heightPicker();
       const numberValueAsString = result.slice(0, -1);
-      const expected = 10 <= numberValueAsString <= 200;
+      const expected = 0 <= numberValueAsString <= 200;
 
       expect(expected).toBe(true);
     });

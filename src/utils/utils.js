@@ -19,14 +19,25 @@ const boxShadowPicker = () => {
 
 export const positionPicker = () => (Math.random() * 75).toFixed(0) + '%';
 
+export const heightPicker = () => {
+  const height = (Math.floor(Math.random() * 201).toFixed(0));
+  console.log(height);
+
+  return `${height}px`;
+};
+
 export const generateOrbStyle = () => {
-  return {
-    backgroundColor: colorPicker(.75),
-    border: borderPicker(),
-    boxShadow: boxShadowPicker(),
-    top: positionPicker(),
-    right: positionPicker()
-  };
+  const orbStyles = {};
+
+  orbStyles['backgroundColor'] = colorPicker(.75);
+  orbStyles['border'] = borderPicker();
+  orbStyles['boxShadow'] = boxShadowPicker();
+  orbStyles['top'] = positionPicker();
+  orbStyles['right'] = positionPicker();
+  orbStyles['height'] = heightPicker();
+  orbStyles['width'] = orbStyles.height;
+    
+  return orbStyles;
 };
 
 export const orbCount = () => Math.ceil(Math.random() * 10);
