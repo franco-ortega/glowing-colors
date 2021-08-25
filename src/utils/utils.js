@@ -25,3 +25,7 @@ export const shadowSpread = () => {
 
   return `${value}vw`;
 };
+
+export const selectPosition = () => {
+  return (Math.random() * 75).toFixed(0) + '%';
+};
