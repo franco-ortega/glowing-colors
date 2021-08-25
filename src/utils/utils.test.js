@@ -1,4 +1,4 @@
-import { colorCode, colorPicker, orbCount, shadowBlur, shadowSpread, shadowThickness } from './utils';
+import { colorCode, colorPicker, orbCount, selectPosition, shadowBlur, shadowSpread, shadowThickness } from './utils';
 
 describe('tests for utils functions', () => {
 
