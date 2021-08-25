@@ -66,60 +66,6 @@ describe('tests for utils functions', () => {
 
   });
 
-  // describe('shadowBlur: sets the box-shadow between 3vw and 15vw', () => {
-
-  //   test('returns a string', () => {
-  //     const result = shadowBlur();
-  //     const expected = (typeof result === 'string');
-
-  //     expect(expected).toBe(true);
-  //   });
-
-  //   test('characters before the last two "vw" character can be coerced to numbers, such as 2vw or 4.75vw', () => {
-  //     const result = shadowBlur();
-  //     const numberValueAsString = result.slice(0, -2);
-  //     const expected = numberValueAsString == Number(numberValueAsString);
-
-  //     expect(expected).toBe(true);
-  //   });
-
-  //   test('numbers in string are between 3 and 15', () => {
-  //     const result = shadowBlur();
-  //     const numberValueAsString = result.slice(0, -2);
-  //     const expected = 3 <= numberValueAsString <= 15;
-
-  //     expect(expected).toBe(true);
-  //   });
-
-  // });
-
-  // describe('shadowSpread: sets the box-shadow between 1vw and 5vw', () => {
-
-  //   test('returns a string', () => {
-  //     const result = shadowSpread();
-  //     const expected = (typeof result === 'string');
-
-  //     expect(expected).toBe(true);
-  //   });
-
-  //   test('characters before the last two "vw" character can be coerced to numbers, such as 2vw or 4.75vw', () => {
-  //     const result = shadowSpread();
-  //     const numberValueAsString = result.slice(0, -2);
-  //     const expected = numberValueAsString == Number(numberValueAsString);
-
-  //     expect(expected).toBe(true);
-  //   });
-
-  //   test('numbers in string are between 1 and 5', () => {
-  //     const result = shadowSpread();
-  //     const numberValueAsString = result.slice(0, -2);
-  //     const expected = 1 <= numberValueAsString <= 5;
-
-  //     expect(expected).toBe(true);
-  //   });
-
-  // });
-
   describe('selectPosition: returns a string used to determine position values', () => {
 
     test('returns a string', () => {
