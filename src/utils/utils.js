@@ -1,7 +1,5 @@
 export const colorPicker = (opacity = 1) => {
-  const colorCode = function() {
-    return Math.floor(Math.random() * 256);
-  };
+  const colorCode = () => Math.floor(Math.random() * 256);
 
   const red = colorCode();
   const green = colorCode();
