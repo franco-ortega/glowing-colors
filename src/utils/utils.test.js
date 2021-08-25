@@ -145,4 +145,15 @@ describe('tests for utils functions', () => {
 
   });
 
+  describe('selectPosition: returns a string used to determine position values', () => {
+
+    test('returns a string', () => {
+      const result = selectPosition();
+      const expected = (typeof result === 'string');
+
+      expect(expected).toBe(true);
+    });
+
+  });
+
 });
