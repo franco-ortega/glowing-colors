@@ -20,18 +20,12 @@ const boxShadowPicker = () => {
 export const positionPicker = () => (Math.random() * 75).toFixed(0) + '%';
 
 export const generateOrbStyle = () => {
-  const bkdgColor = colorPicker(.75);
-  const borderStyle = borderPicker();
-  const boxShadowStyle = boxShadowPicker();
-  const positionTop = positionPicker();
-  const positionRight = positionPicker();
-
   return {
-    backgroundColor: bkdgColor,
-    border: borderStyle,
-    boxShadow: boxShadowStyle,
-    top: positionTop,
-    right: positionRight
+    backgroundColor: colorPicker(.75),
+    border: borderPicker(),
+    boxShadow: boxShadowPicker(),
+    top: positionPicker(),
+    right: positionPicker()
   };
 };
 
