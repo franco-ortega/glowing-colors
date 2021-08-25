@@ -162,6 +162,14 @@ describe('tests for utils functions', () => {
       expect(expected).toBe(true);
     });
 
+    test('numbers in string are between 0 and 75', () => {
+      const result = selectPosition();
+      const numberValueAsString = result.slice(0, -1);
+      const expected = 1 <= numberValueAsString <= 75;
+
+      expect(expected).toBe(true);
+    });
+
 
   });
 
