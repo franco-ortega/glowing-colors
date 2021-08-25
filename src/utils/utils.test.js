@@ -1,4 +1,4 @@
-import { colorPicker, heightPicker, orbCount, positionPicker } from './utils';
+import { borderPicker, colorPicker, heightPicker, orbCount, positionPicker } from './utils';
 
 describe('tests for utils functions', () => {
 
@@ -41,27 +41,28 @@ describe('tests for utils functions', () => {
 
   });
 
-  describe('orbCount: returns 1 to 10 orbs', () => {
+  describe('borderPicker: returns a string to style a border', () => {
 
-    test('returns a number', () => {
-      const result = orbCount();
-      const expected = (typeof result === 'number');
-
-      expect(expected).toBe(true);
-    });
-
-    test('orbCount: returns a number between 1 and 10', () => {
-      const result = orbCount();
-      const expected = 1 <= result <= 10;
+    test('returns a string', () => {
+      const result = positionPicker();
+      const expected = (typeof result === 'string');
 
       expect(expected).toBe(true);
     });
 
-    test('returns an integer', () => {
-      const result = orbCount();
-      const expected = Number.isInteger(result);
+    test('returns a string with a length equal or greater to the minimum length of the border properties: medium solid rbg(color values and opacity of length 1, such as "1")', () => {
+      const result = borderPicker();
+      const expected = result.length >= 28;
 
-      expect(expected).toBe(true);
+      expect(expected).toBe(true);  
+    });
+
+
+    test('returns a string with a length equal or greater to the minimum length of the border properties: medium solid rbg(color values and opacity of length 3, such as "0.75")', () => {
+      const result = borderPicker(.75);
+      const expected = result.length <= 37;
+
+      expect(expected).toBe(true);  
     });
 
   });
@@ -114,6 +115,31 @@ describe('tests for utils functions', () => {
       const result = heightPicker();
       const numberValueAsString = result.slice(0, -1);
       const expected = 0 <= numberValueAsString <= 200;
+
+      expect(expected).toBe(true);
+    });
+
+  });
+
+  describe('orbCount: returns 1 to 10 orbs', () => {
+
+    test('returns a number', () => {
+      const result = orbCount();
+      const expected = (typeof result === 'number');
+
+      expect(expected).toBe(true);
+    });
+
+    test('orbCount: returns a number between 1 and 10', () => {
+      const result = orbCount();
+      const expected = 1 <= result <= 10;
+
+      expect(expected).toBe(true);
+    });
+
+    test('returns an integer', () => {
+      const result = orbCount();
+      const expected = Number.isInteger(result);
 
       expect(expected).toBe(true);
     });
