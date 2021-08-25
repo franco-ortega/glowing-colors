@@ -1,31 +1,6 @@
-import { colorCode, colorPicker, orbCount, selectPosition, shadowBlur, shadowSpread, shadowThickness } from './utils';
+import { colorPicker, orbCount, selectPosition, shadowBlur, shadowSpread } from './utils';
 
 describe('tests for utils functions', () => {
-
-  describe('codeCode: returns an integer between 0 and 255', () => {
-
-    test('returns a number', () => {
-      const result = colorCode();
-      const expected = (typeof result === 'number');
-
-      expect(expected).toBe(true);
-    });
-
-    test('returns a number between 0 and 255', () => {
-      const result = colorCode();
-      const expected = (0 <= result <= 255);
-
-      expect(expected).toBe(true);
-    });
-
-    test('returns an integer', () => {
-      const result = colorCode();
-      const expected = Number.isInteger(result);
-
-      expect(expected).toBe(true);
-    });
-
-  });
 
   describe('colorPicker: returns an rgb value', () => {
 
