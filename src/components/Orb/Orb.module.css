@@ -4,6 +4,8 @@
   width: 75px;
   margin: 5vw;
 
+  position: fixed;
+
   animation: fade 5s linear 0s 1 normal forwards;
   -webkit-animation: fade 5s linear 0s 1 normal forwards;
   -moz-animation: fade 5s linear 0s 1 normal forwards;

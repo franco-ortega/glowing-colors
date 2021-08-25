@@ -1,5 +1,5 @@
 import React from 'react';
-import { colorPicker, shadowBlur, shadowSpread } from '../../utils/utils';
+import { colorPicker, selectPosition, shadowBlur, shadowSpread } from '../../utils/utils';
 import styles from './Orb.module.css';
 
 const Orb = () => {
@@ -11,6 +11,9 @@ const Orb = () => {
   const spreadRadius = shadowSpread();
   const boxShadowStyle = `0 0 ${blurRadius} ${spreadRadius} ${colorPicker(1)}`;
 
+  const positionTop = selectPosition();
+  const positionRight = selectPosition();
+
   return (
     <div
       className={styles.Orb}
@@ -18,7 +21,9 @@ const Orb = () => {
       style={{
         backgroundColor: bkdgColor,
         border: borderStyle,
-        boxShadow: boxShadowStyle
+        boxShadow: boxShadowStyle,
+        top: positionTop,
+        right: positionRight
       }}
     ></div>
   );

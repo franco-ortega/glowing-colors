@@ -31,10 +31,10 @@ export const App = () => {
       className={styles.App}
       data-testid='app'
     >
-      <section>
-        {reset && orbs}
-        {!reset && orbs}
-      </section>
+      
+      {reset && orbs}
+      {!reset && orbs}
+      
     </main>
   );
 };
