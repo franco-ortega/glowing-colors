@@ -8,25 +8,35 @@ export const colorPicker = (opacity = 1) => {
   return `rgb(${red}, ${green}, ${blue}, ${opacity})`;
 };
 
-const borderPicker = () => `medium solid ${colorPicker(.5)}`;
+export const borderPicker = () => `medium solid ${colorPicker(.5)}`;
 
-const boxShadowPicker = () => {
-  const blurRadius = Math.max(3, (Math.random() * 15).toFixed(2));
-  const spreadRadius = Math.max(1, (Math.random() * 5).toFixed(2));
+export const boxShadowPicker = () => {
+  const blurRadius = Math.max(3, (Math.random() * 15).toFixed(1));
+  const spreadRadius = Math.max(1, (Math.random() * 5).toFixed(1));
 
   return `0 0 ${blurRadius}vw ${spreadRadius}vw ${colorPicker(1)}`;
 };
 
 export const positionPicker = () => (Math.random() * 75).toFixed(0) + '%';
 
+export const heightPicker = () => {
+  const height = (Math.floor(Math.random() * 201).toFixed(0));
+
+  return `${height}px`;
+};
+
 export const generateOrbStyle = () => {
-  return {
-    backgroundColor: colorPicker(.75),
-    border: borderPicker(),
-    boxShadow: boxShadowPicker(),
-    top: positionPicker(),
-    right: positionPicker()
-  };
+  const dynamicStyles = {};
+
+  dynamicStyles['backgroundColor'] = colorPicker(.75);
+  dynamicStyles['border'] = borderPicker();
+  dynamicStyles['boxShadow'] = boxShadowPicker();
+  dynamicStyles['top'] = positionPicker();
+  dynamicStyles['right'] = positionPicker();
+  dynamicStyles['height'] = heightPicker();
+  dynamicStyles['width'] = dynamicStyles.height;
+    
+  return dynamicStyles;
 };
 
 export const orbCount = () => Math.ceil(Math.random() * 10);
