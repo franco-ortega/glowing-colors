@@ -10,9 +10,9 @@ export const colorPicker = (opacity = 1) => {
 
 export const borderPicker = () => `medium solid ${colorPicker(.5)}`;
 
-const boxShadowPicker = () => {
-  const blurRadius = Math.max(3, (Math.random() * 15).toFixed(2));
-  const spreadRadius = Math.max(1, (Math.random() * 5).toFixed(2));
+export const boxShadowPicker = () => {
+  const blurRadius = Math.max(3, (Math.random() * 15).toFixed(1));
+  const spreadRadius = Math.max(1, (Math.random() * 5).toFixed(1));
 
   return `0 0 ${blurRadius}vw ${spreadRadius}vw ${colorPicker(1)}`;
 };

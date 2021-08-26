@@ -1,4 +1,4 @@
-import { borderPicker, colorPicker, heightPicker, orbCount, positionPicker } from './utils';
+import { borderPicker, boxShadowPicker, colorPicker, heightPicker, orbCount, positionPicker } from './utils';
 
 describe('tests for utils functions', () => {
 
@@ -44,7 +44,7 @@ describe('tests for utils functions', () => {
   describe('borderPicker: returns a string to style a border', () => {
 
     test('returns a string', () => {
-      const result = positionPicker();
+      const result = borderPicker();
       const expected = (typeof result === 'string');
 
       expect(expected).toBe(true);
@@ -61,6 +61,31 @@ describe('tests for utils functions', () => {
     test('returns a string with a length equal or greater to the minimum length of the border properties: medium solid rbg(color values and opacity of length 3, such as "0.75")', () => {
       const result = borderPicker(.75);
       const expected = result.length <= 37;
+
+      expect(expected).toBe(true);  
+    });
+
+  });
+
+  describe('boxShadowPicker: returns a string to style a border', () => {
+
+    test('returns a string', () => {
+      const result = boxShadowPicker();
+      const expected = (typeof result === 'string');
+
+      expect(expected).toBe(true);
+    });
+
+    test('returns a string with a length equal or greater to the minimum length of the box-shadow properties: 0 0 1vw 1vw rbg(0, 0, 0, 1)', () => {
+      const result = boxShadowPicker();
+      const expected = result.length >= 27;
+
+      expect(expected).toBe(true);  
+    });
+
+    test('returns a string with a length equal or greater to the maximum length of the box-shadow properties:  0 0 11.5vw 1.5vw rbg(100, 100, 100, 1)', () => {
+      const result = boxShadowPicker();
+      const expected = result.length <= 38;
 
       expect(expected).toBe(true);  
     });
