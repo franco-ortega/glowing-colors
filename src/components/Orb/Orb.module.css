@@ -6,12 +6,10 @@
 
   position: fixed;
 
-  animation: fade 5s linear 0s 1 normal forwards;
-  -webkit-animation: fade 5s linear 0s 1 normal forwards;
-  -moz-animation: fade 5s linear 0s 1 normal forwards;
-  -o-animation: fade 5s linear 0s 1 normal forwards;
-
-  transition: height 2s, width 2s, position 2s, top 2s, right 2s;
+  animation: fade 7s linear 0s 1 normal forwards;
+  -webkit-animation: fade 7s linear 0s 1 normal forwards;
+  -moz-animation: fade 7s linear 0s 1 normal forwards;
+  -o-animation: fade 7s linear 0s 1 normal forwards;
 }
 
 @keyframes fade {
@@ -46,9 +44,8 @@
   100% { opacity: 0; }
 }
 
-.Test {
-  /* border-radius: 10px; */
-  transition: height 2s, width 2s, position 2s, top 2s, right 2s;
+.Move {
+  transition: all 2s ease-in-out;
 }
 
 @media screen and (min-width: 500px) {

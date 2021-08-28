@@ -17,7 +17,7 @@ export const App = () => {
   }
 
   const [reset, setReset] = useState(true);
-  const timer = 5000;
+  const timer = 7000;
 
   useEffect(() => {
     setOrbs(orbContainer);
