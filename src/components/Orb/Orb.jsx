@@ -5,12 +5,17 @@ import styles from './Orb.module.css';
 const Orb = () => {
   const orbStyle = generateOrbStyle();
 
+  const onOrbClick = () => {
+    console.log('Orb clicked.');
+  };
+
   return (
-    <div
+    <button
       className={styles.Orb}
       data-testid="orb-element"
       style={orbStyle}
-    ></div>
+      onClick={onOrbClick}
+    ></button>
   );
 };
 
