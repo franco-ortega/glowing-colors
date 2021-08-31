@@ -10,6 +10,6 @@ describe('Welcome tests', () => {
 
     const element = screen.getByText('Glowing Colors');
 
-    expect(element).toContain('Glowing Colors');
+    expect(element).toHaveTextContent('Glowing Colors');
   });
 });
