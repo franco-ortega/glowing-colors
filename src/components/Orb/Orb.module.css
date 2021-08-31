@@ -4,7 +4,7 @@
   max-width: 100px;
   margin: 5vw;
 
-  position: fixed;
+  position: absolute;
 
   animation: fade 7s linear 0s 1 normal forwards;
   -webkit-animation: fade 7s linear 0s 1 normal forwards;
