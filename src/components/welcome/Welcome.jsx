@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from './Welcome.module.css';
 
 const Welcome = () => {
   return (
-    <section>
+    <section className={styles.Welcome}>
       Glowing Colors
     </section>
   );
