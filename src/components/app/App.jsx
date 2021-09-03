@@ -30,7 +30,7 @@ export const App = () => {
   return (
     <main
       className={styles.App}
-      data-testid='app'
+      data-testid="app"
     >
       <Welcome />
       {reset && orbs}

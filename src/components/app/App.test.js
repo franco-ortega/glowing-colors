@@ -3,6 +3,7 @@ import { render, screen } from '@testing-library/react';
 import App from './App';
 
 describe('App tests', () => {
+
   test('renders App', () => {
     render(<App />);
     const element = screen.getByTestId('app');
@@ -16,6 +17,13 @@ describe('App tests', () => {
     elements.forEach(element => {
       expect(element).toBeInTheDocument();
     });
+  });
+
+  test('Welcome renders in App', () => {
+    render(<App />);
+    const welcome = screen.getByText('Glowing Colors');
+    
+    expect(welcome).toBeInTheDocument();
   });
 
 });
