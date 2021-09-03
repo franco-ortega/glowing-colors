@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import App from './App';
 
 describe('App tests', () => {
@@ -24,6 +24,19 @@ describe('App tests', () => {
     const welcome = screen.getByText('Glowing Colors');
     
     expect(welcome).toBeInTheDocument();
+  });
+
+  test('Welcome is removed from view after Continue button is clicked', () => {
+    render(<App />);
+    const welcome = screen.getByText('Glowing Colors');
+    const button = screen.getByText('Continue');
+
+    fireEvent.click(button);
+
+    return waitFor(() => {
+      expect(welcome).not.toBeInTheDocument();
+    });
+    
   });
 
 });
