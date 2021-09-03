@@ -27,3 +27,42 @@
 .Welcome button {
   padding: .25vw .5vw;
 }
+
+.FadeOut {
+  animation: fade-out 2s linear 0s 1 normal forwards;
+  -webkit-animation: fade-out 2s linear 0s 1 normal forwards;
+  -moz-animation: fade-out 2s linear 0s 1 normal forwards;
+  -o-animation: fade-out 2s linear 0s 1 normal forwards;
+}
+
+@keyframes fade-out {
+  0% { opacity: 1; }
+  25% { opacity: .75; }
+  50% { opacity: .5; }
+  75% { opacity: .25; }
+  100% { opacity: 0; }
+}
+
+@-moz-keyframes fade-out {
+  0% { opacity: 1; }
+  25% { opacity: .75; }
+  50% { opacity: .5; }
+  75% { opacity: .25; }
+  100% { opacity: 0; }
+}
+
+@-webkit-keyframes fade-out {
+  0% { opacity: 1; }
+  25% { opacity: .75; }
+  50% { opacity: .5; }
+  75% { opacity: .25; }
+  100% { opacity: 0; }
+}
+
+@-o-keyframes fade-out {
+  0% { opacity: 1; }
+  25% { opacity: .75; }
+  50% { opacity: .5; }
+  75% { opacity: .25; }
+  100% { opacity: 0; }
+}

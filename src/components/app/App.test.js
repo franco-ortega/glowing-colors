@@ -37,6 +37,6 @@ describe('App tests', () => {
       expect(welcome).not.toBeInTheDocument();
     });
     
-  });
+  }, 6000);
 
 });

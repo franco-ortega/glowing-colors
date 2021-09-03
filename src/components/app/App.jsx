@@ -10,13 +10,18 @@ import Welcome from '../welcome/Welcome';
 
 export const App = () => {
   const [begin, setBegin] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false);
   const [orbs, setOrbs] = useState([]);
   const orbTotal = orbCount();
   const orbContainer = [];
 
   const onBeginClick = () => {
     console.log('Continue button clicked');
-    setBegin(true);
+    setFadeOut(true);
+
+    setTimeout(() => {
+      setBegin(true);
+    }, 4000);
   };
 
   for(let i = 1; i < orbTotal + 1; i++) {
@@ -38,7 +43,7 @@ export const App = () => {
       className={styles.App}
       data-testid="app"
     >
-      {!begin && <Welcome onBeginClick={onBeginClick} />}
+      {!begin && <Welcome onBeginClick={onBeginClick} fadeOut={fadeOut} />}
       {reset && orbs}
       {!reset && orbs}
     </main>
