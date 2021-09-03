@@ -3,13 +3,13 @@
   border-radius: 2vw;
   background: hsla(300, 33%, 8%, 1);
 
-  padding: 1rem;
+  padding: 2vw;
   width: fit-content;
-  max-width: 80%;
+  max-width: 60%;
 
   color: whitesmoke;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
   text-align: center;
 
   position: absolute;
@@ -20,10 +20,10 @@
 }
 
 .Welcome p {
+  margin: 1vw;
   text-align: justify;
 }
 
 .Welcome button {
-  margin-top: 2vw;
   padding: .25vw .5vw;
 }
