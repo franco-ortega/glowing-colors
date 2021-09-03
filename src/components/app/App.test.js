@@ -33,10 +33,10 @@ describe('App tests', () => {
 
     fireEvent.click(button);
 
-    return waitFor(() => {
+    waitFor(() => {
       expect(welcome).not.toBeInTheDocument();
     });
     
-  }, 6000);
+  });
 
 });
