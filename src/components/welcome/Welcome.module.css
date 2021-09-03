@@ -1,0 +1,121 @@
+.Welcome {
+  /* border: thin solid whitesmoke; */
+  border-radius: 2vw;
+  background: hsla(300, 33%, 8%, 1);
+
+  width: fit-content;
+  max-width: 85%;
+  padding: 4vw;
+
+  color: hsl(170, 73%, 75%);
+  background: -webkit-linear-gradient(
+    150deg, 
+    lightblue, 
+    yellow, 
+    lightgreen, 
+    cyan, 
+    red
+    );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  text-align: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.Welcome h1 {
+  text-shadow: 0vw 0vw 2vw;
+}
+
+.Welcome p {
+  margin: 3vw 2vw 4vw 2vw;
+  text-align: justify;
+}
+
+.Welcome button {
+  background: hsl(16, 100%, 50%, .75);
+  background: linear-gradient(
+    150deg, 
+    lightblue, 
+    gold, 
+    lightgreen, 
+    cyan
+    );
+  -webkit-text-fill-color: black;
+  border-radius: 5vw;
+  box-shadow: 0vw 0vw 2vw 1.5vw lightcoral;
+  padding: .5vw 2vw;
+  font-size: 5vw;
+}
+
+.FadeOut {
+  animation: fade-out 1s linear 0s 1 normal forwards;
+  -webkit-animation: fade-out 1s linear 0s 1 normal forwards;
+  -moz-animation: fade-out 1s linear 0s 1 normal forwards;
+  -o-animation: fade-out 1s linear 0s 1 normal forwards;
+}
+
+@keyframes fade-out {
+  0% { opacity: 1; }
+  25% { opacity: .75; }
+  50% { opacity: .5; }
+  75% { opacity: .25; }
+  100% { opacity: 0; }
+}
+
+@-moz-keyframes fade-out {
+  0% { opacity: 1; }
+  25% { opacity: .75; }
+  50% { opacity: .5; }
+  75% { opacity: .25; }
+  100% { opacity: 0; }
+}
+
+@-webkit-keyframes fade-out {
+  0% { opacity: 1; }
+  25% { opacity: .75; }
+  50% { opacity: .5; }
+  75% { opacity: .25; }
+  100% { opacity: 0; }
+}
+
+@-o-keyframes fade-out {
+  0% { opacity: 1; }
+  25% { opacity: .75; }
+  50% { opacity: .5; }
+  75% { opacity: .25; }
+  100% { opacity: 0; }
+}
+
+@media screen and (min-width: 500px) {
+  .Welcome {
+    max-width: 50%;
+    padding: 2vw;
+  }
+
+  .Welcome h1 {
+    text-shadow: 0vw 0vw 1w;
+  }
+  
+
+  .Welcome p {
+    margin: 1vw;
+    text-align: justify;
+  }
+  
+  .Welcome button {
+    border-radius: 2vw;
+    box-shadow: 0vw 0vw 1.5vw .25vw lightcoral;
+    padding: .25vw .5vw;
+    font-size: 1.25vw;
+  }
+}

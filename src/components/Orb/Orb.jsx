@@ -5,7 +5,7 @@ import styles from './Orb.module.css';
 const Orb = () => {
   // enableMove adds the Move class to Orb
   const [enableMove, setEnableMove] = useState(false);
-  // move causes the Orb to re-render, which triggers the creation of a new set of styles
+  // move causes the Orb to re-render, which triggers creation of new styles
   const [move, setMove] = useState(false);
 
   const orbStyle = generateOrbStyle();

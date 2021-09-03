@@ -4,15 +4,15 @@
   max-width: 100px;
   margin: 5vw;
 
-  position: fixed;
+  position: absolute;
 
-  animation: fade 7s linear 0s 1 normal forwards;
-  -webkit-animation: fade 7s linear 0s 1 normal forwards;
-  -moz-animation: fade 7s linear 0s 1 normal forwards;
-  -o-animation: fade 7s linear 0s 1 normal forwards;
+  animation: fade-in-and-out 7s linear 0s 1 normal forwards;
+  -webkit-animation: fade-in-and-out 7s linear 0s 1 normal forwards;
+  -moz-animation: fade-in-and-out 7s linear 0s 1 normal forwards;
+  -o-animation: fade-in-and-out 7s linear 0s 1 normal forwards;
 }
 
-@keyframes fade {
+@keyframes fade-in-and-out {
   0% { opacity: 0; }
   25% { opacity: 0.5; }
   50% { opacity: 1; }
@@ -20,7 +20,7 @@
   100% { opacity: 0; }
 }
 
-@-moz-keyframes fade {
+@-moz-keyframes fade-in-and-out {
   0% { opacity: 0; }
   25% { opacity: 0.5; }
   50% { opacity: 1; }
@@ -28,7 +28,7 @@
   100% { opacity: 0; }
 }
 
-@-webkit-keyframes fade {
+@-webkit-keyframes fade-in-and-out {
   0% { opacity: 0; }
   25% { opacity: 0.5; }
   50% { opacity: 1; }
@@ -36,7 +36,7 @@
   100% { opacity: 0; }
 }
 
-@-o-keyframes fade {
+@-o-keyframes fade-in-and-out {
   0% { opacity: 0; }
   25% { opacity: 0.5; }
   50% { opacity: 1; }
