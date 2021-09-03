@@ -8,7 +8,7 @@
   padding: 4vw;
 
   color: hsl(170, 73%, 75%);
-  background: -webkit-linear-gradient(
+  /* background: -webkit-linear-gradient(
     150deg, 
     lightblue, 
     yellow, 
@@ -20,7 +20,7 @@
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: clamp(1.5rem, 2vw, 2.5rem);
   text-align: center;

@@ -32,15 +32,12 @@ export const App = () => {
   const timer = 7000;
 
   useEffect(() => {
-    // console.log('top of useEffect');
     if(begin) {
-      // console.log('Begin is true');
       setOrbs(orbContainer);
       setTimeout(() => {
         setReset(!reset);
       }, timer);
     }
-    // console.log('bottom of useEffect');
   }, [begin, reset]);
 
   return (
