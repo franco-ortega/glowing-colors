@@ -1,5 +1,5 @@
 .Welcome {
-  border: thin solid whitesmoke;
+  /* border: thin solid whitesmoke; */
   border-radius: 2vw;
   background: hsla(300, 33%, 8%, 1);
 
@@ -7,7 +7,20 @@
   max-width: 85%;
   padding: 4vw;
 
-  color: whitesmoke;
+  color: hsl(170, 73%, 75%);
+  background: -webkit-linear-gradient(
+    150deg, 
+    lightblue, 
+    yellow, 
+    lightgreen, 
+    cyan, 
+    red
+    );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: clamp(1.5rem, 2vw, 2.5rem);
   text-align: center;
@@ -19,13 +32,27 @@
   z-index: 1;
 }
 
+.Welcome h1 {
+  text-shadow: 0vw 0vw 2vw;
+}
+
 .Welcome p {
   margin: 3vw 2vw 4vw 2vw;
   text-align: justify;
 }
 
 .Welcome button {
+  background: hsl(16, 100%, 50%, .75);
+  background: linear-gradient(
+    150deg, 
+    lightblue, 
+    gold, 
+    lightgreen, 
+    cyan
+    );
+  -webkit-text-fill-color: black;
   border-radius: 5vw;
+  box-shadow: 0vw 0vw 2vw 1.5vw lightcoral;
   padding: .5vw 2vw;
   font-size: 5vw;
 }
@@ -75,6 +102,11 @@
     padding: 2vw;
   }
 
+  .Welcome h1 {
+    text-shadow: 0vw 0vw 1w;
+  }
+  
+
   .Welcome p {
     margin: 1vw;
     text-align: justify;
@@ -82,9 +114,8 @@
   
   .Welcome button {
     border-radius: 2vw;
+    box-shadow: 0vw 0vw 1.5vw .25vw lightcoral;
     padding: .25vw .5vw;
-    font-size: 1vw;
+    font-size: 1.25vw;
   }
-  
-  
 }

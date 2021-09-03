@@ -7,7 +7,7 @@ const Welcome = ({ onBeginClick, fadeOut }) => {
     <section className={`${styles.Welcome} ${fadeOut && styles.FadeOut}`}>
       <h1>Glowing Colors</h1>
       {/* eslint-disable-next-line max-len */}
-      <p>Welcome to this world of softly changing colors. When you click the Begin button, colorful orbs will repeatedly appear and fade away. The sizes, colors, and amounts of orbs will change each time. Additionally, you can click on the orbs to move them, which will also change their sizes and colors.</p>
+      <p>Welcome to a world of softly changing colors. When you click the Begin button, colorful orbs will repeatedly appear and fade away. The sizes, colors, and amounts of orbs will change each time. Additionally, you can click on the orbs to move them, which will also change their sizes and colors.</p>
       <button onClick={onBeginClick}>Begin</button>
     </section>
   );
