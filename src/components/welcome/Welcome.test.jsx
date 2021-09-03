@@ -5,7 +5,7 @@ import Welcome from './Welcome';
 describe('Welcome tests', () => {
   test('should render the Welcome component', () => {
     render(
-      <Welcome />
+      <Welcome onBeginClick={() => {}} fadeOut={false} />
     );
 
     const element = screen.getByText('Glowing Colors');

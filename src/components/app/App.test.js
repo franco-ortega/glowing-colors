@@ -12,10 +12,14 @@ describe('App tests', () => {
 
   test('Orb renders in App', () => {
     render(<App />);
-    const elements = screen.getAllByTestId('orb-element');
+    const button = screen.getByText('Begin');
+    fireEvent.click(button);
     
-    elements.forEach(element => {
-      expect(element).toBeInTheDocument();
+    waitFor(() => {
+      const elements = screen.getAllByTestId('orb-element');
+      elements.forEach(element => {
+        expect(element).toBeInTheDocument();
+      });
     });
   });
 
@@ -29,7 +33,7 @@ describe('App tests', () => {
   test('Welcome is removed from view after Continue button is clicked', () => {
     render(<App />);
     const welcome = screen.getByText('Glowing Colors');
-    const button = screen.getByText('Continue');
+    const button = screen.getByText('Begin');
 
     fireEvent.click(button);
 
