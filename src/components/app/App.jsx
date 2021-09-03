@@ -21,7 +21,7 @@ export const App = () => {
 
     setTimeout(() => {
       setBegin(true);
-    }, 4000);
+    }, 1100);
   };
 
   for(let i = 1; i < orbTotal + 1; i++) {
@@ -32,10 +32,15 @@ export const App = () => {
   const timer = 7000;
 
   useEffect(() => {
-    setOrbs(orbContainer);
+    console.log('top of useEffect');
+    if(begin) {
+      console.log('Begin is true');
+      setOrbs(orbContainer);
+    }
     setTimeout(() => {
       setReset(!reset);
     }, timer);
+    console.log('bottom of useEffect');
   }, [reset]);
 
   return (
@@ -44,8 +49,8 @@ export const App = () => {
       data-testid="app"
     >
       {!begin && <Welcome onBeginClick={onBeginClick} fadeOut={fadeOut} />}
-      {reset && orbs}
-      {!reset && orbs}
+      {begin && reset && orbs}
+      {begin && !reset && orbs}
     </main>
   );
 };
