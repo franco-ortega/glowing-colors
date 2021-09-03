@@ -21,7 +21,7 @@ export const App = () => {
 
     setTimeout(() => {
       setBegin(true);
-    }, 1100);
+    }, 2000);
   };
 
   for(let i = 1; i < orbTotal + 1; i++) {
@@ -36,12 +36,12 @@ export const App = () => {
     if(begin) {
       console.log('Begin is true');
       setOrbs(orbContainer);
+      setTimeout(() => {
+        setReset(!reset);
+      }, timer);
     }
-    setTimeout(() => {
-      setReset(!reset);
-    }, timer);
     console.log('bottom of useEffect');
-  }, [reset]);
+  }, [begin, reset]);
 
   return (
     <main
