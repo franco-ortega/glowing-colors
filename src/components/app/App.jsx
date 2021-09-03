@@ -9,9 +9,15 @@ import styles from './App.module.css';
 import Welcome from '../welcome/Welcome';
 
 export const App = () => {
+  const [begin, setBegin] = useState(false);
   const [orbs, setOrbs] = useState([]);
   const orbTotal = orbCount();
   const orbContainer = [];
+
+  const onBeginClick = () => {
+    console.log('Continue button clicked');
+    setBegin(true);
+  };
 
   for(let i = 1; i < orbTotal + 1; i++) {
     orbContainer.push(<Orb key={i} />);
@@ -32,7 +38,7 @@ export const App = () => {
       className={styles.App}
       data-testid="app"
     >
-      <Welcome />
+      {!begin && <Welcome onBeginClick={onBeginClick} />}
       {reset && orbs}
       {!reset && orbs}
     </main>

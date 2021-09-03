@@ -9,7 +9,7 @@
 
   color: whitesmoke;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
   text-align: center;
 
   position: absolute;
@@ -19,6 +19,7 @@
   z-index: 1;
 }
 
-.Welcome p {
-  font-size: clamp(1.25rem, 2.75vw, 2rem);
+.Welcome button {
+  margin-top: 2vw;
+  padding: .25vw .5vw;
 }
