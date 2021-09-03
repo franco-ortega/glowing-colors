@@ -10,19 +10,6 @@ describe('App tests', () => {
     expect(element).toBeInTheDocument();
   });
 
-  test('Orb renders in App', () => {
-    render(<App />);
-    const button = screen.getByText('Begin');
-    fireEvent.click(button);
-    
-    waitFor(() => {
-      const elements = screen.getAllByTestId('orb-element');
-      elements.forEach(element => {
-        expect(element).toBeInTheDocument();
-      });
-    });
-  });
-
   test('Welcome renders in App', () => {
     render(<App />);
     const welcome = screen.getByText('Glowing Colors');
@@ -30,7 +17,7 @@ describe('App tests', () => {
     expect(welcome).toBeInTheDocument();
   });
 
-  test('Welcome is removed from view after Continue button is clicked', () => {
+  test('Welcome is removed from view when Begin button is clicked', () => {
     render(<App />);
     const welcome = screen.getByText('Glowing Colors');
     const button = screen.getByText('Begin');
@@ -40,7 +27,19 @@ describe('App tests', () => {
     waitFor(() => {
       expect(welcome).not.toBeInTheDocument();
     });
+  });
+
+  test('Orb renders in App', () => {
+    render(<App />);
+    const button = screen.getByText('Begin');
+    fireEvent.click(button);
     
+    waitFor(() => {
+      const elements = screen.queryAllByTestId('orb-element');
+      elements.forEach(element => {
+        expect(element).toBeInTheDocument();
+      });
+    });
   });
 
 });
