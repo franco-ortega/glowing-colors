@@ -4,3 +4,30 @@
   min-height: 100vh;
   width: 100vw;
 }
+
+.App > button:first-child {
+  background: hsla(300, 33%, 3%, 1);
+  padding: 5vw 1vw;
+  position: fixed;
+  right: 0%;
+  color: hsl(270, 40%, 80%);
+  opacity: 0;
+}
+
+.App > button:first-child:focus,
+.App > button:first-child:hover {
+  opacity: 100%;
+}
+
+@media screen and (min-width: 500px) {
+  .App > button:first-child {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .App > button:first-child {
+    padding: 2vw 1vw;
+    font-size: 1.5vw;
+  }
+}
