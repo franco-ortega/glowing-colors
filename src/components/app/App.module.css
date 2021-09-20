@@ -15,8 +15,21 @@
   opacity: 0;
 }
 
-
 .App > button:first-child:focus,
 .App > button:first-child:hover {
   opacity: 100%;
+}
+
+@media screen and (min-width: 500px) {
+  .App > button:first-child {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .App > button:first-child {
+    padding: 2vw 1vw;
+    font-size: 1.5vw;
+  }
+  
 }
