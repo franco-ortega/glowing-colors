@@ -1,26 +1,22 @@
 .Welcome {
-  /* border: thin solid whitesmoke; */
+  background: hsla(300, 33%, 8%, 50%);
+  /* background: linear-gradient(
+    150deg,
+    hsl(195, 53%, 79%),
+    hsl(120, 73%, 75%),
+    hsl(0, 100%, 50%)
+    ); */
+  /* background-size: 100%; */
+  
+
   border-radius: 2vw;
-  background: hsla(300, 33%, 8%, 1);
 
   width: fit-content;
   max-width: 85%;
   padding: 4vw;
 
-  color: hsl(170, 73%, 75%);
-  /* background: -webkit-linear-gradient(
-    150deg, 
-    lightblue, 
-    yellow, 
-    lightgreen, 
-    cyan, 
-    red
-    );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-  -webkit-text-fill-color: transparent; */
+  color: hsl(220, 90%, 85%);
+  /* color: yellow; */
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: clamp(1.5rem, 2vw, 2.5rem);
   text-align: center;
@@ -30,10 +26,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-}
-
-.Welcome h1 {
-  text-shadow: 0vw 0vw 2vw;
 }
 
 .Welcome p {
@@ -50,9 +42,8 @@
     lightgreen, 
     cyan
     );
-  -webkit-text-fill-color: black;
   border-radius: 5vw;
-  box-shadow: 0vw 0vw 2vw 1.5vw lightcoral;
+  box-shadow: 0vw 0vw 2vw 1vw lightcoral;
   padding: .5vw 2vw;
   font-size: 5vw;
 }
@@ -117,5 +108,26 @@
     box-shadow: 0vw 0vw 1.5vw .25vw lightcoral;
     padding: .25vw .5vw;
     font-size: 1.25vw;
+  }
+}
+
+
+
+
+@media screen and (min-width: 900px) {
+  .Welcome {
+    /* background: linear-gradient(
+    150deg, 
+    lightblue, 
+    lightgreen, 
+    purple,
+    red
+    );
+    background-size: 100%; */
+  /* background-clip: text; */
+  /* -webkit-background-clip: text; */
+  /* -moz-background-clip: text; */
+  /* -moz-text-fill-color: transparent; */
+  /* -webkit-text-fill-color: transparent; */
   }
 }
