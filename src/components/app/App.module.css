@@ -16,7 +16,7 @@
 
 .App > button:first-child:focus,
 .App > button:first-child:hover {
-  opacity: 100%;
+  opacity: 1;
 }
 
 @media screen and (min-width: 500px) {
