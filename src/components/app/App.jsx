@@ -38,16 +38,12 @@ export const App = () => {
   }, [begin, reset]);
 
   const onGoBackClick = () => {
-    console.log('Go Back clicked');
     setBegin(false);
     setFadeOut(false);
   };
 
   return (
-    <main
-      className={styles.App}
-      data-testid="app"
-    >
+    <main className={styles.App} data-testid="app">
       {begin && <button onClick={onGoBackClick}>Go Back</button>}
       {!begin && <Welcome onBeginClick={onBeginClick} fadeOut={fadeOut} />}
       {begin && reset && orbs}
